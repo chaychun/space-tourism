@@ -3,36 +3,40 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+  <!-- Top main for background, with padding to account for nav bar -->
   <main
-    class="flex h-full flex-1 flex-grow flex-col justify-end bg-black p-6 md:p-32 xl:px-42"
+    class="h-full bg-[url(../assets/home/background-home-tablet.jpg)] bg-cover bg-center pt-22 md:pt-24 xl:bg-[url(../assets/home/background-home-desktop.jpg)] xl:pt-34"
   >
-    <div
-      class="flex flex-grow flex-col justify-between xl:flex-grow-0 xl:flex-row xl:items-center"
-    >
-      <div class="flex flex-col items-center gap-6 xl:mx-0 xl:items-start">
-        <span class="t8 md:t5 text-light-blue uppercase"
-          >So you want to travel to</span
-        >
-        <h1 class="t1 md:t1 text-[80px] text-white uppercase">Space</h1>
-        <p
-          class="t9 text-light-blue text-center text-[15px] text-balance md:text-base xl:text-left xl:text-lg"
-        >
-          Let’s face it; if you want to go to space, you might as well genuinely
-          go to outer space and not hover kind of on the edge of it. Well sit
-          back, and relax because we’ll give you a truly out of this world
-          experience!
-        </p>
-      </div>
+    <!-- actual content container -->
+    <div class="flex h-full flex-1 flex-col justify-end p-6 md:p-32 xl:px-42">
       <div
-        class="flex flex-grow items-center justify-center md:flex-grow-0 md:items-end xl:mx-0 xl:w-full xl:justify-end"
+        class="flex flex-grow flex-col justify-between xl:flex-grow-0 xl:flex-row xl:items-center"
       >
-        <a href="#">
-          <div
-            class="flex h-36 w-36 items-center justify-center rounded-full bg-white uppercase md:h-68 md:w-68"
+        <div class="flex flex-col items-center gap-6 xl:mx-0 xl:items-start">
+          <span class="t8 md:t5 text-light-blue uppercase"
+            >So you want to travel to</span
           >
-            <span class="t4 md:t4 text-lg">Explore</span>
-          </div>
-        </a>
+          <h1 class="t1 md:t1 text-[80px] text-white uppercase">Space</h1>
+          <p
+            class="t9 text-light-blue text-center text-[15px] text-balance md:text-base xl:text-left xl:text-lg"
+          >
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+        <div
+          class="flex flex-grow items-center justify-center md:flex-grow-0 md:items-end xl:mx-0 xl:w-full xl:justify-end"
+        >
+          <a href="#">
+            <div
+              class="flex h-36 w-36 items-center justify-center rounded-full bg-white uppercase md:h-68 md:w-68"
+            >
+              <span class="t4 md:t4 text-lg">Explore</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </main>
