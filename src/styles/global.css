@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-bellefair: "Bellefair", serif;
+  --font-barlow: "Barlow", sans-serif;
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+}
+
+/* Typography Utility Classes */
+@utility t1 {
+  font-family: var(--font-bellefair);
+  font-size: 144px;
+  line-height: 171.9%;
+  letter-spacing: 0px;
+}
+
+@utility t2 {
+  font-family: var(--font-bellefair);
+  font-size: 100px;
+  line-height: 114.6%;
+  letter-spacing: 0px;
+}
+
+@utility t3 {
+  font-family: var(--font-bellefair);
+  font-size: 56px;
+  line-height: 64.2%;
+  letter-spacing: 0px;
+}
+
+@utility t4 {
+  font-family: var(--font-bellefair);
+  font-size: 32px;
+  line-height: 36.7%;
+  letter-spacing: 0px;
+}
+
+@utility t5 {
+  font-family: var(--font-barlow-condensed);
+  font-size: 28px;
+  line-height: 33.6%;
+  letter-spacing: 4px;
+}
+
+@utility t6 {
+  font-family: var(--font-bellefair);
+  font-size: 28px;
+  line-height: 32.1%;
+  letter-spacing: 0px;
+}
+
+@utility t7 {
+  font-family: var(--font-barlow-condensed);
+  font-size: 14px;
+  line-height: 16.8%;
+  letter-spacing: 2px;
+}
+
+@utility t8 {
+  font-family: var(--font-barlow-condensed);
+  font-size: 16px;
+  line-height: 19.2%;
+  letter-spacing: 2px;
+}
+
+@utility t9 {
+  font-family: var(--font-barlow);
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0px;
+}
