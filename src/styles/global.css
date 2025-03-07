@@ -4,6 +4,9 @@
   --font-bellefair: "Bellefair", serif;
   --font-barlow: "Barlow", sans-serif;
   --font-barlow-condensed: "Barlow Condensed", sans-serif;
+
+  --color-dark-blue: hsl(230, 35%, 7%);
+  --color-light-blue: hsl(231, 77%, 90%);
 }
 
 /* Typography Utility Classes */
