@@ -3,5 +3,25 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div>Hello world!</div>
+  <main class="flex h-full flex-1 flex-col bg-black p-6">
+    <div class="flex flex-col items-center gap-6">
+      <span class="t8 text-light-blue uppercase">So you want to travel to</span>
+      <h1 class="t1 text-[80px] text-white uppercase">Space</h1>
+      <p class="t9 text-light-blue text-center text-[15px]">
+        Let’s face it; if you want to go to space, you might as well genuinely
+        go to outer space and not hover kind of on the edge of it. Well sit
+        back, and relax because we’ll give you a truly out of this world
+        experience!
+      </p>
+    </div>
+    <div class="flex flex-grow items-center justify-center">
+      <a href="#">
+        <div
+          class="flex h-36 w-36 items-center justify-center rounded-full bg-white uppercase"
+        >
+          <span class="t4 text-lg">Explore</span>
+        </div>
+      </a>
+    </div>
+  </main>
 </Layout>

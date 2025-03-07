@@ -13,56 +13,56 @@
 @utility t1 {
   font-family: var(--font-bellefair);
   font-size: 144px;
-  line-height: 171.9%;
+  line-height: normal;
   letter-spacing: 0px;
 }
 
 @utility t2 {
   font-family: var(--font-bellefair);
   font-size: 100px;
-  line-height: 114.6%;
+  line-height: normal;
   letter-spacing: 0px;
 }
 
 @utility t3 {
   font-family: var(--font-bellefair);
   font-size: 56px;
-  line-height: 64.2%;
+  line-height: normal;
   letter-spacing: 0px;
 }
 
 @utility t4 {
   font-family: var(--font-bellefair);
   font-size: 32px;
-  line-height: 36.7%;
+  line-height: normal;
   letter-spacing: 0px;
 }
 
 @utility t5 {
   font-family: var(--font-barlow-condensed);
   font-size: 28px;
-  line-height: 33.6%;
+  line-height: normal;
   letter-spacing: 4px;
 }
 
 @utility t6 {
   font-family: var(--font-bellefair);
   font-size: 28px;
-  line-height: 32.1%;
+  line-height: normal;
   letter-spacing: 0px;
 }
 
 @utility t7 {
   font-family: var(--font-barlow-condensed);
   font-size: 14px;
-  line-height: 16.8%;
+  line-height: normal;
   letter-spacing: 2px;
 }
 
 @utility t8 {
   font-family: var(--font-barlow-condensed);
   font-size: 16px;
-  line-height: 19.2%;
+  line-height: normal;
   letter-spacing: 2px;
 }
 
