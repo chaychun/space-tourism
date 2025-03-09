@@ -1,11 +1,49 @@
 ---
 import Image from "astro/components/Image.astro";
 import Logo from "../assets/shared/logo.svg";
+import HamburgerIcon from "../assets/shared/icon-hamburger.svg";
 ---
 
-<header class="fixed h-22 w-full bg-blue-800/30 text-white md:h-24 xl:h-34">
-  <a href="/">
-    <Image src={Logo} alt="Logo" />
-  </a>
-  <nav class="">Placeholder nav</nav>
+<header class="fixed flex h-22 w-full items-end md:h-24 xl:h-34">
+  <div class="flex w-full justify-between">
+    <div class="flex items-center xl:w-1/2">
+      <a href="/" class="mx-6 md:mx-10 xl:mx-16">
+        <Image src={Logo} alt="Logo" class="aspect-square h-12 w-12 min-w-12" />
+      </a>
+      <div class="hidden h-[1px] w-0 bg-white/25 xl:block xl:w-full"></div>
+    </div>
+
+    <div class="flex items-center pr-6 md:hidden">
+      <button class="text-light-blue">
+        <Image src={HamburgerIcon} alt="Menu" class="w-6" />
+      </button>
+    </div>
+
+    <nav class="hidden w-1/2 flex-grow md:flex">
+      <ul
+        class="flex h-min flex-grow justify-end gap-12 bg-white/5 text-white backdrop-blur-xl md:px-10 xl:px-16"
+      >
+        <li
+          class="flex h-24 items-center border-y-3 border-transparent transition duration-500 hover:border-b-white/50"
+        >
+          <a href="/" class="t8 uppercase"><b>00</b> Home</a>
+        </li>
+        <li
+          class="flex h-24 items-center border-y-3 border-transparent transition duration-500 hover:border-b-white/50"
+        >
+          <a href="/destination" class="t8 uppercase"><b>01</b> Destination</a>
+        </li>
+        <li
+          class="flex h-24 items-center border-y-3 border-transparent transition duration-500 hover:border-b-white/50"
+        >
+          <a href="/crew" class="t8 uppercase"><b>02</b> Crew</a>
+        </li>
+        <li
+          class="flex h-24 items-center border-y-3 border-transparent transition duration-500 hover:border-b-white/50"
+        >
+          <a href="/technology" class="t8 uppercase"><b>03</b> Technology</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
