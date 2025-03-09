@@ -3,10 +3,10 @@ import "@fontsource/bellefair";
 import "@fontsource/barlow";
 import "@fontsource/barlow-condensed";
 import "../styles/global.css";
-import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
 ---
 
-<html lang="en">
+<html lang="en" class="bg-black">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -15,7 +15,7 @@ import Nav from "../components/Nav.astro";
     <title>Space Tourism Site</title>
   </head>
   <body class="flex flex-col">
-    <Nav />
+    <Header />
     <slot />
   </body>
 </html>
