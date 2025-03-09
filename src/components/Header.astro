@@ -2,6 +2,12 @@
 import Image from "astro/components/Image.astro";
 import Logo from "../assets/shared/logo.svg";
 import HamburgerIcon from "../assets/shared/icon-hamburger.svg";
+
+interface Props {
+  currentPage: string;
+}
+
+const { currentPage } = Astro.props;
 ---
 
 <header class="fixed flex h-22 w-full items-end md:h-24 xl:h-34">
@@ -24,28 +30,48 @@ import HamburgerIcon from "../assets/shared/icon-hamburger.svg";
         class="flex h-min flex-grow justify-end gap-12 bg-white/5 text-white backdrop-blur-xl md:px-10 xl:px-16"
       >
         <li
-          class="flex h-24 items-center border-y-3 border-transparent transition duration-500 hover:border-b-white/50"
+          class:list={[
+            "flex h-24 items-center border-y-3 border-transparent",
+            currentPage === "Home"
+              ? "border-b-white"
+              : "transition duration-500 hover:border-b-white/50",
+          ]}
         >
           <a href="/" class="t8 space-x-3 uppercase"
             ><b>00</b><span>Home</span></a
           >
         </li>
         <li
-          class="flex h-24 items-center border-y-3 border-transparent transition duration-500 hover:border-b-white/50"
+          class:list={[
+            "flex h-24 items-center border-y-3 border-transparent",
+            currentPage === "Destination"
+              ? "border-b-white"
+              : "transition duration-500 hover:border-b-white/50",
+          ]}
         >
           <a href="/destination" class="t8 space-x-3 uppercase"
             ><b>01</b><span>Destination</span></a
           >
         </li>
         <li
-          class="flex h-24 items-center border-y-3 border-transparent transition duration-500 hover:border-b-white/50"
+          class:list={[
+            "flex h-24 items-center border-y-3 border-transparent",
+            currentPage === "Crew"
+              ? "border-b-white"
+              : "transition duration-500 hover:border-b-white/50",
+          ]}
         >
           <a href="/crew" class="t8 space-x-3 uppercase"
             ><b>02</b><span>Crew</span></a
           >
         </li>
         <li
-          class="flex h-24 items-center border-y-3 border-transparent transition duration-500 hover:border-b-white/50"
+          class:list={[
+            "flex h-24 items-center border-y-3 border-transparent",
+            currentPage === "Technology"
+              ? "border-b-white"
+              : "transition duration-500 hover:border-b-white/50",
+          ]}
         >
           <a href="/technology" class="t8 space-x-3 uppercase"
             ><b>03</b><span>Technology</span></a
