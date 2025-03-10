@@ -11,6 +11,7 @@ const destinations = await getCollection("destinations");
   >
     <!-- Content container -->
     <div class="flex h-full w-full flex-col">
+      <!-- Heading -->
       <div class="flex justify-center gap-6 p-6 pb-0">
         <span class="t8 font-bold text-white/25">01</span><h1
           class="t8 text-white uppercase"
@@ -18,28 +19,57 @@ const destinations = await getCollection("destinations");
           Pick your destination
         </h1>
       </div>
+
+      <!-- Content -->
       <div
-        class="flex h-full w-full snap-x snap-mandatory gap-12 overflow-x-scroll p-6"
+        class="flex h-full w-full snap-x snap-mandatory gap-12 overflow-x-scroll p-8"
       >
         {
           destinations.map((destination) => (
             // each "page"
-            <div class="flex h-full w-full flex-shrink-0 snap-center flex-col items-center justify-center gap-22 xl:flex-row">
+            <div
+              id={destination.data.name.toLowerCase()}
+              class="flex h-full w-full flex-shrink-0 snap-center flex-col items-center justify-center xl:flex-row"
+            >
               <img
                 src={destination.data.images.webp}
                 alt={destination.data.name}
                 width="150"
                 height="150"
               />
-              <div class="flex flex-col items-center">
-                <h2 class="t2 text-[56px] text-white uppercase">
-                  {destination.data.name}
-                </h2>
-                <p class="t9 text-light-blue pt-4 text-center text-[15px] text-balance">
-                  {destination.data.description}
-                </p>
-                <div class="mt-6 h-[1px] w-full bg-white/25" />
+
+              <ul class="flex gap-8 pt-8">
+                {destinations.map((d) => (
+                  <li
+                    class:list={[
+                      "h-8 border-b-3 border-transparent",
+                      d.data.name === destination.data.name
+                        ? "border-b-white"
+                        : "transition duration-500 hover:border-b-white/50",
+                    ]}
+                  >
+                    <a
+                      href={`/destination/#${d.data.name.toLowerCase()}`}
+                      class="t7 uppercase"
+                    >
+                      {d.data.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              <div class="flex flex-grow flex-col items-center justify-between pt-6">
+                <div class="flex flex-col items-center">
+                  <h2 class="t2 text-[56px] text-white uppercase">
+                    {destination.data.name}
+                  </h2>
+                  <p class="t9 text-light-blue pt-4 text-center text-[15px] text-balance">
+                    {destination.data.description}
+                  </p>
+                </div>
+
                 <div class="flex flex-col gap-6 pt-6">
+                  <div class="h-[1px] w-full bg-white/25" />
                   <div class="flex flex-col items-center gap-3">
                     <span class="t7 text-light-blue uppercase">
                       Avg. Distance
