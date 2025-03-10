@@ -1,7 +1,65 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const destinations = await getCollection("destinations");
 ---
 
 <Layout title="Destination">
-  <main class="h-full pt-22 text-white md:pt-24 xl:pt-34">Destination</main>
+  <main
+    class="h-full bg-[url(../assets/destination/background-destination-tablet.jpg)] bg-cover bg-center pt-22 text-white md:pt-24 xl:bg-[url(../assets/destination/background-destination-desktop.jpg)] xl:pt-34"
+  >
+    <!-- Content container -->
+    <div class="flex h-full w-full flex-col">
+      <div class="flex justify-center gap-6 p-6 pb-0">
+        <span class="t8 font-bold text-white/25">01</span><h1
+          class="t8 text-white uppercase"
+        >
+          Pick your destination
+        </h1>
+      </div>
+      <div
+        class="flex h-full w-full snap-x snap-mandatory gap-12 overflow-x-scroll p-6"
+      >
+        {
+          destinations.map((destination) => (
+            // each "page"
+            <div class="flex h-full w-full flex-shrink-0 snap-center flex-col items-center justify-center gap-22 xl:flex-row">
+              <img
+                src={destination.data.images.webp}
+                alt={destination.data.name}
+                width="150"
+                height="150"
+              />
+              <div class="flex flex-col items-center">
+                <h2 class="t2 text-[56px] text-white uppercase">
+                  {destination.data.name}
+                </h2>
+                <p class="t9 text-light-blue pt-4 text-center text-[15px] text-balance">
+                  {destination.data.description}
+                </p>
+                <div class="mt-6 h-[1px] w-full bg-white/25" />
+                <div class="flex flex-col gap-6 pt-6">
+                  <div class="flex flex-col items-center gap-3">
+                    <span class="t7 text-light-blue uppercase">
+                      Avg. Distance
+                    </span>
+                    <span class="t6 uppercase">
+                      {destination.data.distance}
+                    </span>
+                  </div>
+                  <div class="flex flex-col items-center gap-3">
+                    <span class="t7 text-light-blue uppercase">
+                      Est. Travel Time
+                    </span>
+                    <span class="t6 uppercase">{destination.data.travel}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </main>
 </Layout>
